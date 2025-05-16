@@ -1,162 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Simple Music Player Discord Bot - README</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #23272a;
-      color: #f6f6f7;
-      margin: 0;
-      padding: 0 0 40px 0;
-    }
-    .container {
-      max-width: 700px;
-      margin: 40px auto;
-      background: #2c2f33;
-      border-radius: 12px;
-      padding: 32px 30px 24px 30px;
-      box-shadow: 0 6px 24px #0005;
-    }
-    h1 {
-      color: #7289da;
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 2.2em;
-      letter-spacing: 1px;
-    }
-    h2 {
-      color: #43b581;
-      margin-top: 30px;
-      margin-bottom: 12px;
-      font-size: 1.3em;
-      border-bottom: 1px solid #36393f;
-      padding-bottom: 3px;
-    }
-    ul, ol {
-      margin-left: 24px;
-    }
-    code, pre {
-      background: #23272a;
-      color: #43b581;
-      border-radius: 4px;
-      padding: 2px 6px;
-      font-size: 1em;
-    }
-    pre {
-      display: block;
-      padding: 12px 16px;
-      margin: 12px 0;
-      overflow-x: auto;
-      background: #18191c;
-      color: #fff;
-    }
-    .author {
-      color: #7289da;
-      font-weight: bold;
-    }
-    .note {
-      background: #3a3f45;
-      border-left: 4px solid #faa61a;
-      padding: 12px 16px;
-      margin: 20px 0;
-      border-radius: 4px;
-      color: #fff;
-    }
-    a {
-      color: #faa61a;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .discord {
-      color: #7289da;
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Simple Music Player Discord Bot</h1>
-    <p>
-      A simple Discord bot to play local MP3 music in a voice channel, with audio effects (bass boost, reverb, etc.).<br>
-      <span class="author">Author: Brandon</span>
-    </p>
+# Simple Music Player Discord Bot
 
-    <h2>Features</h2>
-    <ul>
-      <li>Plays MP3 files from a local folder</li>
-      <li>Built-in bass boost, reverb, and equalizer</li>
-      <li>Simple commands (<code>r!join</code>, <code>r!leave</code>, <code>r!next</code>, <code>r!prev</code>)</li>
-      <li>Optional shuffle mode</li>
-      <li>Volume control</li>
-    </ul>
+A simple Discord bot to play local MP3 music in a voice channel, with audio effects like bass boost and reverb.  
+**Author:** Brandon
 
-    <h2>Requirements</h2>
-    <ul>
-      <li>Node.js v18 or higher</li>
-      <li>A Discord server where you can add bots</li>
-      <li><a href="https://ffmpeg.org/download.html" target="_blank">ffmpeg</a> installed on your machine</li>
-    </ul>
+## Features
 
-    <h2>Installation</h2>
-    <ol>
-      <li><b>Clone the repository:</b>
-        <pre>git clone https://github.com/yourusername/simple-music-player-discord.git
-cd simple-music-player-discord</pre>
-      </li>
-      <li><b>Install dependencies:</b>
-        <pre>npm install</pre>
-      </li>
-      <li><b>Add your MP3 files</b>
-        <ul>
-          <li>Put your <code>.mp3</code> files in the <code>musique</code> folder (create it if needed).</li>
-        </ul>
-      </li>
-      <li><b>Configure your bot token</b>
-        <ul>
-          <li>Replace <code>'XXXXXX'</code> in <code>index.js</code> with your Discord bot token.</li>
-        </ul>
-      </li>
-      <li><b>Start the bot:</b>
-        <pre>node index.js</pre>
-      </li>
-    </ol>
+- Plays MP3 files from a local folder
+- Built-in bass boost, reverb, and equalizer
+- Simple commands: `r!join`, `r!leave`, `r!next`, `r!prev`
+- Optional shuffle mode
+- Volume control
 
-    <h2>Discord Commands</h2>
-    <ul>
-      <li><code>r!join</code>: Bot joins your voice channel and starts playing music.</li>
-      <li><code>r!leave</code>: Bot leaves the voice channel.</li>
-      <li><code>r!next</code>: Skip to the next track.</li>
-      <li><code>r!prev</code>: Go back to the previous track.</li>
-    </ul>
-    <div class="note">Type commands in a text channel where the bot has access.</div>
+## Requirements
 
-    <h2>Customization</h2>
-    <p>Edit the settings in <code>index.js</code> as needed:</p>
-    <pre>
-const config = {
-    token: 'YOUR_TOKEN_HERE',
-    musicFolder: './musique',
-    bassBoost: 2.0,
-    reverbLevel: 0.3,
-    volume: 0.25,
-    shuffle: true
-};
-    </pre>
+- Node.js v18 or higher
+- A Discord server where you can add bots
+- [ffmpeg](https://ffmpeg.org/download.html) installed on your machine
 
-    <h2>Author</h2>
-    <p><span class="author">Brandon</span></p>
+## Installation
 
-    <h2>Notes</h2>
-    <ul>
-      <li>The bot only supports <code>.mp3</code> files placed in the <code>musique</code> folder.</li>
-      <li>For more effects, edit the filters in the code (see <code>createAudioResourceWithEffects</code> function).</li>
-    </ul>
-    <div class="note">Enjoy your music! <span class="discord">🎵</span></div>
-  </div>
-</body>
-</html>
+1. Clone the repository:
+
+2. Install dependencies: "npm install"
+
+
+3. Add your MP3 files:
+- Place your `.mp3` files inside the `musique` folder (create it if it doesn't exist).
+
+4. Configure your bot token:
+- Replace `'XXXXXX'` in `index.js` with your Discord bot token.
+
+5. Start the bot:
+
+
+## Commands
+
+- `r!join`: Bot joins your voice channel and starts playing music.
+- `r!leave`: Bot leaves the voice channel.
+- `r!next`: Skip to the next track.
+- `r!prev`: Go back to the previous track.
+
+*Type commands in a text channel where the bot has access.*
+
+## Configuration
+
+You can customize settings in `index.js`:
+
+
+## Notes
+
+- The bot only supports `.mp3` files placed in the `musique` folder.
+- To add or modify audio effects, edit the filters in the `createAudioResourceWithEffects` function.
+
+---
+
+Enjoy your music! 🎵  
+**Author:** Brandon
